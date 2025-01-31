@@ -158,7 +158,8 @@ namespace Opm {
         if (field_props.has_double("MINPVV")) {
             field_props.deleteMINPVV();
         }
-        this->initLgrs(deck);
+        // Commented out in favor of providing level/local IJK for LGRs with either active/inactive cells.
+        // this->initLgrs(deck);
         this->aquifer_config.load_connections(deck, this->getInputGrid());
 
         this->applyMULTXYZ();
